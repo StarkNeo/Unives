@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    CABECERA DE LA PAGINA CON LA ETIQUETA <HEAD>
+-->
+<head>
+    <!-- 
+        <META> SON ETIQUETAS DE METADATOS Y CONTIENEN INFORMACION DE LA PAGINA WEB
+            UTILIZADAS POR LOS NAVEGADORES, MOTORES DE BUSQUEDA Y OTROS SERVICIOS
+        -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title>Ejemplo 3</title>
+
+</head>
+<!--- CUERPO DE LA PAGINA REPRESENTADO CON LA ETIQUETA <BODY>  -->
+<body>
+    <!--ETIQUETA SEMANTICA QUE INDICA POR LO GENERAL CONTIENE EL MENU DE NAVEGACION-->
+    <header>
+        <h1 id="title">TECATE PA'L NORTE FEST HISTORIAL</h1>
+        <!--- NAVEGACION ETIQUETA <NAV> CONTIENE LOS ENLACES A OTRAS PAGINAS -->
+        <nav>
+            <!---LISTA CON ELEMENTOS O ENLACES-->
+            <ul id="years">
+                <li id="inicio" class="year">Inicio</li>
+    
+            </ul>
+        </nav>
+    </header>
+
+    <!--MAIN ES LA ETIQUETA SEMANTICA QUE ESPECIFICA EL CONTENIDO PRINCIPAL DE LA PAGINA-->
+    <main>
+        
+        <!--ETIQUETA <IMG> 
+            CONTIENE LA IMAGEN PRINCIPAL DE LA PAGINA Y EN EL QUE APARECERAN
+            LAS IMAGENES DEL ARTISTA SELECCIONADO
+        
+        -->
+        <img id="poster"
+            src="https://prismic-images.tmol.io/ticketmaster-tm-mx/ca0d3029-846f-4980-be55-e2529db5a5b1_900X600.png?auto=compress,format&rect=0,0,900,600&w=900&h=600"
+            alt="">
+        
+        <!--
+            TABLA CON EL CALENDARIO DEL EVENTO, 
+            CONTIENE LOS NOMBRES DE LOS ARTISTAS QUE SE PRESENTARAN
+        
+        -->
+            <table>
+                <!--THEAD CONTIENE EL ENCABEZADO DE LA TABLA -->
+            <thead>
+                <!--LA ETIQUETA <TR> REPRESENTA UNA FILA DE LA TABLA-->
+                <tr>
+                    <!--LA ETIQUETA <TH> REPRESENTA UNA COLUMNA O CAMPO DENTRO DEL ENCABEZADO-->
+                    <th>
+                        <h2>Dia</h2>
+                    </th>
+                    <th>
+                        <h2>Bandas</h2>
+                    </th>
+                </tr>
+            </thead>
+            <!--TBODY CONTIENE EL CUERPO PRINCIPAL DE LA TABLA-->
+            <tbody>
+                <tr>
+                    <!--<TD> REPRESENTA EN CAMPO DE LA FILA Y ESTA RELACIONADO CON EL NUMERO DE COLUMNAS-->
+                    <td class='left'>
+                        <h3>Viernes</h3>
+                    </td>
+                    <td>
+                        <ul id="friday">
+                        </ul>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class='left'>
+                        <h3>Sabado</h3>
+                    </td>
+                    <td>
+                        <ul id="saturday">
+
+                        </ul>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class='left'>
+                        <h3>Domingo</h3>
+                    </td>
+                    <td>
+                        <ul id="sunday">
+
+                        </ul>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+    </main>
+    <!--
+        <SCRIPT> REPRESENTA LOS ENLACES A LAS HOJAS QUE CONTIENE EL CODIGO DE PROGRAMACION
+            Y QUE CONVIERTE A UNA PAGINA ESTATICA EN DINAMICA
+    -->
+    <script src="./jquery.js"></script>
+    <script type="module" src="./script.js"></script>
+    
+
+    </script>
+</body>
+
+</html>

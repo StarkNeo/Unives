@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./form.css">
+  <title>Pedidos</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="./Designer.png" alt="Logo mexican burger" class="logo">
+      <h1>Charro Burger</h1>
+      <h2>La mejor hamburguesa estilo Mexico!</h2>
+         
+    </nav>
+    
+  </header>
+  
+  <section class="overlay">
+
+  <form name="datos-cliente" action="" method="get" id="dato-cliente">
+    <h2>Ordena ahora!</h2>
+    <section id="datos">
+      
+      <legend>Tu informacion</legend>
+      <fieldset>
+        <label class="required" for="nombre">Nombre</label>
+        <input title="Nombre completo como deseas que aparezca en tu orden" type="text" name="nombre" placeholder="Juan Venado" required><br>
+
+      </fieldset>
+      <fieldset>
+        <label class="required" for="direccion">Direccion de envio</label>
+        <input title="calle, numero, colonia, codigo postal" type="text" name="direccion" placeholder="Avenida union 354 Col. Miramontes 64610" required><br>
+
+      </fieldset>
+      <fieldset>
+        <label class="required" for="telefono">Telefono</label>
+        <input title="Tu telefono incluyendo lada" type="tel" placeholder="528136587208" name="telefono" required><br>
+
+      </fieldset>
+      <fieldset>
+        <label class="required" for="email">Correo electronico</label>
+        <input type="email" name="email" placeholder="john@gmail.com" required><br>
+
+      </fieldset>
+      <fieldset>
+        <input type="button" value="continuar" onclick="openForm()">
+      </fieldset>
+      
+    </section>
+     
+  </form>  
+
+    <form name="pedidos" action="./submission.html" method="get" id="burger">
+      <h1>Tu Hamburguesa</h1>
+      <section>
+        <fieldset class="type-select">
+          <label for="tipo de carne">Tipo de carne</label>
+          <select name="tipo de carne" id="patty" required>
+            <option value=""></option>
+            <option value="Res">Res</option>
+            <option value="Pollo">Pollo</option>
+            <option value="Puerco">Puerco</option>
+
+          </select>
+        </fieldset>
+        <fieldset class="type-select">
+          <label for="cantidad">Sencilla, doble o triple?</label>
+          <select name="cantidad" id="cantidad">
+            <option value=""></option>
+            <option value="sencilla">1 carne</option>
+            <option value="doble">2 carnes</option>
+            <option value="triple">3 carnes</option>
+          </select>
+        </fieldset>
+        <fieldset class="type-select">
+
+          <label for="coccion">Termino de coccion?</label>
+          <select name="coccion" id="doneness" required>
+            <option value=""></option>
+            <option value="azul">Azul</option>
+            <option value="rojo">Rojo Ingles</option>
+            <option value="medio">Termino medio</option>
+            <option value="3/4">3/4</option>
+            <option value="bien cocido">Bien cocido</option>
+
+          </select>
+        </fieldset>
+
+      </section>
+
+      <section class="toppings">
+        <legend>Tus ingredientes</legend>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="lettuce" value="lechuga">
+          <label for="ingrediente">Lechuga</label>
+
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="tomato" value="tomate">
+          <label for="ingrediente">Tomate</label>
+
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="onion" value="cebolla">
+          <label for="ingrediente">Cebolla</label>
+
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="avocado" value="aguacate">
+          <label for="ingrediente">Aguacate</label>
+
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="beans" value="frijoles">
+          <label for="ingrediente">Frijoles</label>
+
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="jalapeno" value="jalapeno">
+          <label for="ingrediente">Jalapeno</label>
+
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="ingrediente" id="bacon" value="tocino">
+          <label for="ingrediente">tocino</label>
+        </fieldset>
+
+      </section>
+      <section id="quesos">
+       <legend>Quesos</legend>
+       <fieldset class="type-select">
+        <label for="queso">Deseas incluir queso</label>
+        <select name="queso" id="cheese" required>
+          <option value=""></option>
+          <option value="Si">Si</option>
+          <option value="No">No</option>
+        </select>
+      </fieldset>
+      <fieldset id="cheese-type" class="type-select">
+        <label for="tipo-queso">Tipo de queso</label>
+        <select name="tipo-queso" id="tipo-queso">
+          <option value=""></option>
+          <option value="americano">Tipo Americano</option>
+          <option value="monterrey">Monterrey Jack</option>
+          
+        </select>
+      </fieldset>
+      
+      </section>
+      <fieldset class="type-select">
+        <label for="pan">Tipo de pan</label>
+        <select name="pan" id="bun" required>
+          <option value=""></option>
+          <option value="ajonjoli">Ajonjoli</option>
+          <option value="papa">Papa</option>
+          <option value="pretzel">Pretzel</option>
+          <option value="centeno">Centeno</option>
+          <option value="integral">Integral</option>
+          <option value="blanco">Blanco</option>
+        </select>
+      </fieldset>
+      <section class="sauce-selection">
+        <legend>Aderezos</legend>
+        <fieldset>
+          <label for="aderezo">Ketchup</label>
+          <input type="checkbox" name="aderezo" id="aderezo" value="ketchup">
+        </fieldset>
+        
+        <fieldset>
+          <label for="aderezo">Mayonesa</label>
+          <input type="checkbox" name="aderezo" id="aderezo" value="mayonesa">
+
+        </fieldset>
+        <fieldset>
+          <label for="aderezo">Mostaza</label>
+          <input type="checkbox" name="aderezo" id="aderezo" value="mostaza">
+        </fieldset>
+
+      </section>
+
+
+      <section class="extra-info">
+      
+        <label for="extra">Ingredientes extra que desees agregar?</label>
+        <br>
+        <textarea id="extra" name="extra" rows="3" cols="40">
+
+        </textarea>
+
+      </section>
+      <section class="submission">
+        <input type="button" value="Agregar a pedido" id="add" onclick="addProduct()">
+        
+      </section>
+      <section id="order-section">
+        <h3>Mi pedido</h3>
+        <div id="mi-pedido">
+
+        </div>
+      </section>
+      <input type="submit" value="Enviar pedido">
+    </form>
+  </section>
+  <script src="./form.js"></script>
+</body>
+
+</html>

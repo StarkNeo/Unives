@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websocket</title>
+</head>
+
+<body>
+    <h1>WebSocket Client</h1>
+    <input id="connect" type="button" value="Conectar">
+    <div id="messages"></div>
+    <script>
+        document.getElementById('connect').addEventListener("click", () => {
+            // Crear una conexion websocket 
+            const socket = new WebSocket('ws://localhost:8080');
+
+            // Abrir la conexion y enviar un mensaje 
+            socket.addEventListener('open', () => {
+                socket.send('Hola servidor me estoy conectando!');
+            });
+
+            // Manejo de errores o fallos de conexion
+            socket.addEventListener('error', () => {
+                let messagesDiv = document.getElementById('messages');
+                let newMessage = document.createElement('div');
+                newMessage.textContent = "No es posible conectarse al servidor";
+                messagesDiv.appendChild(newMessage);
+               
+            });
+
+            // Cerrar la conexion 
+            socket.addEventListener('close', () => {
+                const messagesDiv = document.getElementById('messages');
+                const closingMessage = document.createElement('div');
+                closingMessage.textContent = 'Conexion websocket cerrada';
+                messagesDiv.appendChild(closingMessage);
+                console.log('La conexion al WebSocket ha sido cerrada');
+            });
+            // Escuchar mensajes del servidor y enviarlos al DOM 
+            socket.addEventListener('message', (event) => {
+                let messagesDiv = document.getElementById('messages');
+                let newMessage = document.createElement('div');
+                newMessage.textContent = `Server says: ${event.data}`;
+                messagesDiv.appendChild(newMessage);
+            });
+        })
+
+    </script>
+</body>
+
+</html>

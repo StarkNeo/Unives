@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .project, .blog-post {
+            border: 1px solid #ddd;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .contact-form {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+    </header>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+                <a href="link-to-project-1">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+                <a href="link-to-project-2">View Project</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-post">
+                <h3>Blog Post 1</h3>
+                <p>Excerpt of blog post 1.</p>
+                <a href="link-to-blog-post-1">Read More</a>
+                <!-- Placeholder for comments -->
+                <div class="comments">
+                    <h4>Comments</h4>
+                    <p>No comments yet.</p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post 2</h3>
+                <p>Excerpt of blog post 2.</p>
+                <a href="link-to-blog-post-2">Read More</a>
+                <!-- Placeholder for comments -->
+                <div class="comments">
+                    <h4>Comments</h4>
+                    <p>No comments yet.</p>
+                </div>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 My Personal Website</p>
+        <p>
+            Follow me:
+            <a href="https://twitter.com/yourprofile">Twitter</a> |
+            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
+            <a href="https://github.com/yourprofile">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>

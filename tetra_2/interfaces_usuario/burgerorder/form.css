@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+  background-color: orange;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+}
+h2{
+  text-align: center;
+}
+#burger {
+  display: none;
+  flex-direction: column;
+  line-height: 30px;
+  height: 80%;
+  overflow: auto;
+}
+
+form hr {
+  width: 15%;
+}
+
+legend {
+  text-align: center;
+  font-weight: bold;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  border: none;
+  margin: auto;
+}
+
+fieldset label,
+fieldset input {
+  width: 50%;
+  height: fit-content;
+  
+}
+input:focus {
+  background-color: yellow;
+}
+
+.required::after{
+  content: "*";
+}
+
+
+h1 {
+  text-align: center;
+}
+
+#terminos {
+  width: 10%;
+  cursor: pointer;
+
+}
+
+.type-select {
+  justify-content: space-between;
+
+}
+
+.type-select select {
+  width: 50%;
+  height: fit-content;
+
+
+}
+
+.cooked {
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 16% auto;
+  background-color: white;
+  border-radius: 40px;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  width: 79.2%;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  top: 0px;
+  z-index: 999;
+  left: 10.4%;
+  padding-top: 0.2rem;
+  border-radius: 20px;
+}
+
+.logo {
+  height: 100px;
+  display: block;
+  margin: auto;
+
+}
+
+nav h2 {
+  width: auto;
+  margin-top: 0px;
+
+}
+
+.toppings label,
+.cheesy label {
+  margin-right: 25px;
+}
+
+.extra-info,
+.submission {
+  margin: auto;
+}
+#cheese-type{
+  display: none;
+}
+#order-section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#mi-pedido{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  
+}
+#mi-pedido .elemento{
+  border: 1px solid yellow;
+  background-color: orange;
+  color: black;
+  font-weight:bold;
+  margin: 0.5rem;
+  font-size: 15px;
+  width: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  list-style: none;
+  list-style-position:inside;
+  
+}
+.element-head{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid yellow;
+  height: 2.5rem;
+  
+}
+.control{
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 100%;
+  width: 2rem;
+  background-color: yellow;  
+}
+
+.btn-eliminar-elemento{
+  width: fit-content;
+  height: fit-content;
+  background-color: yellow;
+  color: black;
+  font-weight:bolder;
+  border: 1px solid orange;
+  cursor: pointer;
+}
+
+input[type="submit"]{
+  width: 10%;
+  margin: auto;
+  cursor: pointer;
+  background-color: yellow;
+  border: 1px solid orange;
+  font-weight: bolder;
+}
+
+#add, input[value="continuar"]{
+  cursor: pointer;
+  background-color: yellow;
+  border: 1px solid orange;
+  font-weight: bolder;
+}
+#go-back{
+  width: fit-content;
+  margin: auto;
+}
+
+#confirmacion-pedido{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 16% auto;
+  background-color: white;
+  border-radius: 40px; 
+}
+#confirmacion-pedido p{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+address{
+  margin: auto;
+}

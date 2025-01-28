@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proyectos</title>
+    <link rel="stylesheet" href='./task.css' />
+
+</head>
+
+<body>
+    <div class="navbar">
+
+        <h1>LISTA DE TAREAS</h1>
+    </div>
+    <form name="new-task" id="new-task" action="">
+        <fieldset>
+            <input type="button" value="X" id="form-close" onclick="closeForm()">
+        </fieldset>
+        <fieldset>
+            <label for="task-name">Nombre de la tarea</label>
+            <input name="task-name" type="text">
+        </fieldset>
+        <fieldset>
+            <label for="task-description">Descripcion</label>
+            <textarea name="task-description" id=""></textarea>
+
+        </fieldset>
+        <fieldset>
+            <label for="start-date">Fecha Inicio</label>
+            <input type="date" name="start-date" id="start-date">
+        </fieldset>
+        <fieldset>
+            <label for="end-date">Fecha Termino</label>
+            <input type="date" name="end-date" id="end-date">
+        </fieldset>
+        <fieldset>
+            <input type="button" value="Agregar" id="add-project" onclick="addProject()">
+        </fieldset>
+    </form>
+    <div class="site-body">
+        <div class="container">
+            
+            <div class="card-column future-projects">
+                <div class="taskgroup-heading">
+                    <h2>POR HACER</h2>
+                    <img class="plus-icon" src="./plus.png" onclick="openForm()">
+
+                </div>
+                <div class="card future-i">
+                    <img class="minus-icon" src="./minus.png" alt="minus image">
+                                       
+                    <p class="task-description">Pick Color Trends</p>
+                    <img class="list-icon"
+                        src="https://content.codecademy.com/courses/learn-css-grid/project-ii/Resources/list_icon.svg">
+                    <p class="task-date">4/21/2017</p>
+                    
+                </div>
+                
+                
+            </div>
+            <div class="card-column active-projects">
+                <div class="taskgroup-heading">
+                    <h2>EN PROCESO</h2>
+
+                </div>
+                
+            </div>
+            <div id="completed" class="card-column completed-projects">
+                <div class="taskgroup-heading">
+                    <h2>COMPLETADAS</h2>
+
+                </div>
+                <div class="card complete-i">
+                    <div class="rectangle yellow"></div>
+                    <div class="rectangle green"></div>
+                    <div class="rectangle blue"></div>
+                    <div class="rectangle orange"></div>
+                    <p class="task-description">Research Trends</p>
+                    <img class="list-icon"
+                        src="https://content.codecademy.com/courses/learn-css-grid/project-ii/Resources/list_icon.svg">
+                    <p class="task-date">4/19/2017</p>
+                </div>
+                <div class="add-card-container">
+                    <input class="new-card-task" placeholder="Add a card...">
+                    <button class="add-card">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./script.js"></script>
+</body>
+
+</html>

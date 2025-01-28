@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eventsstyles.css">
+    <title>Events</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://www.facebook.com/#:~:text=Log%20into%20Facebook%20to%20start%20sharing%20and%20connecting">Go to facebook</a></li>
+        </ul>
+    </nav>
+    <section>
+        <legend>EXAMPLE ONBLUR</legend>
+        <input type="text" id="myInput" placeholder="Click outside to trigger blur">
+    </section>
+    <section>
+        <legend>EXAMPLE ONCHANGE</legend>
+        <select id="mySelect">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="cherry">Cherry</option>
+        </select>
+    </section>
+    <section>
+        <legend>EXAMPLE ONCLICK</legend>
+        <button id="clickme">Click me</button>
+    </section>
+    <section>
+        <legend>EXAMPLE ONDBLCLICK</legend>
+        <button id="dblclick">Double-click me</button>
+    </section>
+    <section>
+        <legend>EXAMPLE ONFOCUS</legend>
+        <input type="text" id="onfocus" placeholder="Focus on this input">
+    </section>
+    <section>
+        <legend>EXAMPLE ONKEYDOWN</legend>
+        <input type="text" id="keydown" placeholder="Type something...">
+
+    </section>
+    <section>
+        <legend>EXAMPLE ONKEYPRESS</legend>
+        <input type="text" id="keypress" placeholder="Press a key...">
+    </section>
+    <section>
+        <legend>EXAMPLE ONKEYUP</legend>
+
+        <input type="text" id="keyup" placeholder="Release a key...">
+    </section>
+   
+    <section>
+        <legend>EXAMPLE ONMOUSEDOWN</legend>
+        <button id="mousedown">Hold mouse button down</button>
+
+    </section>
+    <section>
+        <legend>EXAMPLE ONMOUSEMOVE</legend>
+        <div id="mousemove" style="width:200px;height:200px;border:1px solid black;">
+            Move your mouse here
+        </div>
+
+    </section>
+    <section>
+        <legend>EXAMPLE ONMOUSEOUT</legend>
+        <div id="mouseout" style="width:200px;height:200px;border:1px solid black;">
+            Move your mouse out of this box
+        </div>
+    </section>
+    <section>
+        <legend>EXAMPLE ONMOUSEOVER</legend>
+        <div id="mouseover" style="width:200px;height:200px;border:1px solid black;">
+            Hover over this box
+        </div>
+
+    </section>
+    <section>
+        <legend>EXAMPLE ONMOUSEUP</legend>
+        <button id="mouseup">Release mouse button</button>
+    </section>
+    <section>
+        <legend>EXAMPLE ONRESET-ONSUBMIT</legend>
+        <form id="myForm">
+            <input type="text" name="name" placeholder="Enter your name">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section>
+        <legend>EXAMPLE ONSELECT</legend>
+        <textarea id="myTextarea" rows="4" cols="50">
+            Select some text in this textarea.
+            </textarea>
+    </section>
+
+    <script src="./events.js"></script>
+</body>
+
+</html>
