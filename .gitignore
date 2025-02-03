@@ -1,0 +1,9 @@
+#Ignore all these files
+*.exe
+*.mp4
+*.mp3
+*.xls
+*.xlsx
+*.pdf
+*.docx
+*.docs
