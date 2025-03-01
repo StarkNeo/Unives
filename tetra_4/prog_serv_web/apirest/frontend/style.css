@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+.xml-element {
+    margin-left: 20px;
+    padding: 5px;
+    border-left: 2px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.xml-element strong {
+    font-weight: bold;
+    color: #45a049;
+}
+
+
+.xml-element p {
+    font-style: italic;
+}
+
+
+.xml-element p {
+    margin-left: 10px
+}
+#popup{
+    width: fit-content;
+    height: 50%;
+    background-color: white;
+    z-index: 9999;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    margin-top: 45%;
+}
+#win-btns{
+    display: flex;
+    justify-content: end;
+}
+#close{
+    border: none;
+
+}
+
+#downloads{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}

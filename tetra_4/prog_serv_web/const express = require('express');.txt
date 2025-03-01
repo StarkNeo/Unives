@@ -1,0 +1,127 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+const xml = require('xml');
+
+app.use(express.text({ type: 'application/xml' }));
+
+app.get('/api/pedido/:id', (req, res) => {
+    const pedidoId = req.params.id;
+    const pedido = {
+        Pedido: [
+            { _attr: { PedidoID: pedidoId } },
+            { link: { _attr: { rel: 'self', href: `http://example.com/pedidos/${pedidoId}` } } },
+            { Fecha: '2025-02-19' },
+            { Cliente: [
+                { link: { _attr: { rel: 'self', href: 'http://example.com/clientes/67890' } } },
+                { ClienteID: '67890' },
+                { Nombre: 'Juan Pérez' },
+                { Direccion: [
+                    { Calle: 'Av. Siempre Viva' },
+                    { Ciudad: 'Springfield' },
+                    { Estado: 'TX' },
+                    { CodigoPostal: '12345' }
+                ] }
+            ] },
+            { Productos: [
+                { Producto: [
+                    { link: { _attr: { rel: 'self', href: 'http://example.com/productos/111' } } },
+                    { ProductoID: '111' },
+                    { Nombre: 'Producto 1' },
+                    { Precio: 25.00 },
+                    { Cantidad: 2 }
+                ] },
+                { Producto: [
+                    { link: { _attr: { rel: 'self', href: 'http://example.com/productos/222' } } },
+                    { ProductoID: '222' },
+                    { Nombre: 'Producto 2' },
+                    { Precio: 15.00 },
+                    { Cantidad: 1 }
+                ] }
+            ] }
+        ]
+    };
+    res.set('Content-Type', 'application/xml');
+    res.send(xml(pedido, { declaration: true }));
+});
+
+app.listen(port, () => {
+    console.log(`Backend API listening at http://localhost:${port}`);
+});
+
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const Pedido = () => {
+    const [pedido, setPedido] = useState(null);
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/pedido/12345', { headers: { 'Accept': 'application/xml' } })
+            .then(response => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(response.data, 'application/xml');
+                const pedidoData = {
+                    PedidoID: xmlDoc.getElementsByTagName('Pedido')[0].getAttribute('PedidoID'),
+                    Fecha: xmlDoc.getElementsByTagName('Fecha')[0].textContent,
+                    Cliente: {
+                        ClienteID: xmlDoc.getElementsByTagName('ClienteID')[0].textContent,
+                        Nombre: xmlDoc.getElementsByTagName('Nombre')[0].textContent,
+                        Direccion: {
+                            Calle: xmlDoc.getElementsByTagName('Calle')[0].textContent,
+                            Ciudad: xmlDoc.getElementsByTagName('Ciudad')[0].textContent,
+                            Estado: xmlDoc.getElementsByTagName('Estado')[0].textContent,
+                            CodigoPostal: xmlDoc.getElementsByTagName('CodigoPostal')[0].textContent
+                        },
+                        link: {
+                            href: xmlDoc.getElementsByTagName('link')[1].getAttribute('href')
+                        }
+                    },
+                    Productos: Array.from(xmlDoc.getElementsByTagName('Producto')).map(producto => ({
+                        ProductoID: producto.getElementsByTagName('ProductoID')[0].textContent,
+                        Nombre: producto.getElementsByTagName('Nombre')[0].textContent,
+                        Precio: producto.getElementsByTagName('Precio')[0].textContent,
+                        Cantidad: producto.getElementsByTagName('Cantidad')[0].textContent,
+                        link: {
+                            href: producto.getElementsByTagName('link')[0].getAttribute('href')
+                        }
+                    })),
+                    link: {
+                        href: xmlDoc.getElementsByTagName('link')[0].getAttribute('href')
+                    }
+                };
+                setPedido(pedidoData);
+            })
+            .catch(error => console.error('Error:', error));
+    }, []);
+
+    if (!pedido) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        <div>
+            <h1>Pedido</h1>
+            <p><strong>PedidoID:</strong> {pedido.PedidoID}</p>
+            <p><strong>Fecha:</strong> {pedido.Fecha}</p>
+            <h2>Cliente</h2>
+            <p><strong>ClienteID:</strong> {pedido.Cliente.ClienteID}</p>
+            <p><strong>Nombre:</strong> {pedido.Cliente.Nombre}</p>
+            <p><strong>Dirección:</strong> {pedido.Cliente.Direccion.Calle}, {pedido.Cliente.Direccion.Ciudad}, {pedido.Cliente.Direccion.Estado} {pedido.Cliente.Direccion.CodigoPostal}</p>
+            <h2>Productos</h2>
+            {pedido.Productos.map(producto => (
+                <div key={producto.ProductoID}>
+                    <p><strong>ProductoID:</strong> {producto.ProductoID}</p>
+                    <p><strong>Nombre:</strong> {producto.Nombre}</p>
+                    <p><strong>Precio:</strong> {producto.Precio}</p>
+                    <p><strong>Cantidad:</strong> {producto.Cantidad}</p>
+                    <a href={producto.link.href}>Detalles del Producto</a>
+                </div>
+            ))}
+            <a href={pedido.link.href}>Detalles del Pedido</a>
+        </div>
+    );
+};
+
+export default Pedido;
