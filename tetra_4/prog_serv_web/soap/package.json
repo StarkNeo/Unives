@@ -1,0 +1,20 @@
+{
+  "name": "soap",
+  "version": "1.0.0",
+  "description": "responde solicitud de getstockprice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesus Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "soap": "^1.1.8",
+    "xml2js": "^0.6.2"
+  }
+}
