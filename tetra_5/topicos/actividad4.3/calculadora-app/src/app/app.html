@@ -1,0 +1,32 @@
+<main class="main">
+  <div class="content">
+
+    <div class="left-side">
+
+      <h1>Hello, {{ title }}</h1>
+      <div class="calculadora">
+        <h2>Calculadora Básica</h2>
+
+        <label for="num1">Número 1:</label>
+        <input type="number" [(ngModel)]="num1" id="num1" name="num1">
+
+        <label for="num2">Número 2:</label>
+        <input type="number" [(ngModel)]="num2" id="num2" name="num2">
+
+        <div class="botones">
+          <button (click)="sumar()">Sumar</button>
+          <button (click)="restar()">Restar</button>
+          <button (click)="multiplicar()">Multiplicar</button>
+          <button (click)="dividir()">Dividir</button>
+        </div>
+
+        <h3>Resultado: {{ resultado }}</h3>
+      </div>
+    </div>
+    <div class="divider" role="separator" aria-label="Divider"></div>
+
+  </div>
+</main>
+
+
+<router-outlet />

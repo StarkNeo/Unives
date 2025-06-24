@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+    <form>
+        <fieldset>
+            <label for="operando1">Numero 1: </label>
+            <input type="text" id="operando1" name="operando1" title="Only numbers are allowed">
+        </fieldset>
+        <fieldset>
+            <label for="operando2"> Numero 2: </label>
+            <input type="text" name="operando2" id="operando2" title="Only numbers are allowed">
+        </fieldset>
+        <fieldset>
+            <label for="resultado">Resultado: </label>
+            <input type="text" name="resultado" id="resultado" disabled>
+        </fieldset>
+        <div>
+            <input type="button" value="+" id="suma"></input>
+            <input type="button" value="-" id="resta"></input>
+            <input type="button" value="x" id="multiplicacion"></input>
+            <input type="button" value="/" id="division"></input>
+        </div>
+        
+
+    </form>
+    
+    <script src="./renderer.js"></script>
+</body>
+
+</html>

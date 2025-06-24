@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EDUCACION\\UNIVES\\practicas_software\\tetra_5\\des_aplic_mov\\ejemplo\\ejemplo.csproj",
+      "projectUniqueName": "D:\\GITHUB PROJECTS\\UNIVES\\practicas_software\\tetra_5\\des_aplic_mov\\ejemplo\\ejemplo.csproj",
       "projectName": "ejemplo",
-      "projectPath": "D:\\EDUCACION\\UNIVES\\practicas_software\\tetra_5\\des_aplic_mov\\ejemplo\\ejemplo.csproj",
+      "projectPath": "D:\\GITHUB PROJECTS\\UNIVES\\practicas_software\\tetra_5\\des_aplic_mov\\ejemplo\\ejemplo.csproj",
       "packagesPath": "C:\\Users\\ceran\\.nuget\\packages\\",
-      "outputPath": "D:\\EDUCACION\\UNIVES\\practicas_software\\tetra_5\\des_aplic_mov\\ejemplo\\obj\\",
+      "outputPath": "D:\\GITHUB PROJECTS\\UNIVES\\practicas_software\\tetra_5\\des_aplic_mov\\ejemplo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
