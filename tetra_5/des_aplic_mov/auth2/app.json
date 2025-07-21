@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +20,8 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.auth2"
+      "package": "com.anonymous.auth2",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
@@ -38,6 +42,15 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "13c80701-d11d-45a1-a22a-2233589cdd22"
+      }
+    },
+    "owner": "neostark",
+    "updates": {
+      "url": "https://u.expo.dev/13c80701-d11d-45a1-a22a-2233589cdd22"
     }
   }
 }
